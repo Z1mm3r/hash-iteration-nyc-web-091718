@@ -7,5 +7,10 @@
 # }
 
 def select_winner(passengers)
-  # add the code snippet here!
+  winner = passengers.select do |suite, passenger|
+    (suite == :suite_a && passenger[0,1] == 'A')
+  end
+  
+  winner[:suite_a]
+  
 end
